@@ -112,7 +112,7 @@
     </div>
     <div class="form-floating">
       <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control mb-2" id="password" placeholder="Password" required>
+      <input type="password" class="form-control mb-2" id="password" placeholder="Password" name="password" required>
     <div class="valid-feedback">
             Looks good!
     </div>
@@ -124,6 +124,22 @@
             Please provide a valid input!
     </div>
     </div>
+    <div class="form-floating">
+        <label for="gender" class="form-label d-block">Gender</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3">Other</label>
+        </div>
+    </div>
+
     <label for="role" class="form-label">User role</label>
     <select class="form-select" aria-label="Default select example" id="role" required>
       <option selected></option>

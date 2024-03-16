@@ -23,6 +23,7 @@ public class SignUpServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
+        
         // Retrieve form data
         String username = request.getParameter("username");
         String email = request.getParameter("email");
@@ -42,6 +43,9 @@ public class SignUpServlet extends HttpServlet {
         }
         if (password == null || password.isEmpty()) {
             errors.add("Password is required.");
+        }
+        if (confirmPassword == null || confirmPassword.isEmpty()) {
+        errors.add("Confirm Password is required.");
         }
         if (!password.equals(confirmPassword)) {
             errors.add("Passwords do not match.");
@@ -69,8 +73,8 @@ public class SignUpServlet extends HttpServlet {
     }
 
     private boolean isValidEmail(String email) {
-        // Basic email format validation
-        // You can implement more robust email validation as needed
-        return email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}$");
+        // implement email validation
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}$";
+        return email.matches(emailRegex);
     }
 }
