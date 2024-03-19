@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.medilink;
+package com.medilink.user;
 
 import javax.persistence.*;
 
@@ -19,6 +19,9 @@ public class User {
 
     @Column(name = "email", nullable = false, unique = true)
     private String email;
+    
+    @Column(name = "Number", nullable = false, unique = true)
+    private String phone;
 
     @Column(name = "password", nullable = false)
     private String password;
@@ -29,16 +32,30 @@ public class User {
     @Column(name = "role", nullable = false)
     private String role; // New field for the user's role
 
+    public User() {
+    }
+
 
     // Constructors, getters, and setters
     // Constructor with no arguments
-    public User(String username1, String email1, String password1, String confirmPassword1, String role1) {
+
+    /**
+     *
+     * @param username1
+     * @param email1
+     * @param phone
+     * @param password1
+     * @param confirmPassword1
+     * @param role1
+     */
+    public User(String username1, String email1, String phone, String password1, String confirmPassword1, String role1) {
     }
 
     // Constructor with arguments
-    public User(String username, String email, String password, String confirmPassword) {
+    public User(String username, String email, String phone, String password, String confirmPassword) {
         this.username = username;
         this.email = email;
+        this.phone = phone;
         this.password = password;
         this.confirmPassword = confirmPassword;
         this.role = role;
@@ -68,6 +85,14 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    public String getPhone(){
+        return phone;
+    }
+    
+    public void setPhone(String phone){
+        this.phone = phone;
+    }
 
     public String getPassword() {
         return password;
@@ -92,6 +117,7 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
+                ", phone='" + phone + '\''+
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +
                 ", role='" + role + '\''+

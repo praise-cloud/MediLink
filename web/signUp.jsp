@@ -48,10 +48,12 @@
       
       .form-label{
           font-weight: 600;
+          font-size: 19px;
+          margin-bottom: 2px;
       }
       
       .form-floating{
-          margin-bottom: 10px;
+          margin-bottom: 15px;
       }
 
       .form-signin input[type="email"] {
@@ -71,6 +73,10 @@
         position: absolute;
         top: 19rem;
         right: 21rem;
+    }
+    
+    input{
+        margin-top: 2px;
     }
     
     [class*="btn-outline-primary"]{
@@ -94,7 +100,7 @@
       <div class="container">
           <img src="components/images/doodle/clumsy.png" width="390" height="300" alt="alt" class="form-img"/>
         </div>
-    <h5 class="h4 mb-3 fw-normal text-muted">Please sign up</h5
+      <h5 class="h4 mb-3 fw-normal text-muted">Please sign up</h5>
 
     <div class="form-floating">
       <label for="username" class="form-label">Full name</label>
@@ -102,24 +108,31 @@
         <div class="invalid-feedback">
             please provide a valid input!
         </div>
-    </div
+    </div>
     <div class="form-floating">
         <label for="email" class="form-label">Email address</label>
         <input type="email" class="form-control mb-2" id="email" placeholder="name@example.com" required>
        <div class="invalid-feedback">
               Please provide a valid input!
+        </div>
+    </div>
+    <div class="form-floating">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="phone" class="form-control mb-2" id="phoneNumber" placeholder="+234 000 0000 000" required>
+       <div class="invalid-feedback">
+              Please provide a valid input!
           </div>
     </div>
     <div class="form-floating">
-      <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control mb-2" id="password" placeholder="Password" name="password" required>
+      <label for="new-password" class="form-label">Password</label>
+      <input type="password" class="form-control mb-2" id="new-password" placeholder="Password" name="new-password" required>
     <div class="valid-feedback">
             Looks good!
     </div>
     </div>
     <div class="form-floating">
       <label for="confirmPassword" class="form-label">Password 2</label>
-      <input type="password" class="form-control mb-2" id="confirmPassword" placeholder="Password" required>
+      <input type="password" class="form-control mb-2" id="confirmPassword" placeholder="Password" name="confirmPassword" required>
     <div class="invalid-feedback">
             Please provide a valid input!
     </div>

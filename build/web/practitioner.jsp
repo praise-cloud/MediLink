@@ -181,76 +181,6 @@
         -moz-user-select: none;
         user-select: none;
       }
-      
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
     </style>
 
     
@@ -265,7 +195,7 @@
           <div class="row">
               <div class="col-2" style="width: 13%">
                   <div class="sidebar">
-                        <a class="navbar-brand my-5 mx-5" style="font-weight: 600; font-size: 35px" href="index.jsp">MediLink</a>
+                        <a class="navbar-brand my-5 mx-5" style="font-weight: 600; font-size: 35px; color: #000" href="index.jsp">MediLink</a>
                         
                         <hr class="featurette-divider">
                         <ul class="container-fluid">
@@ -275,19 +205,19 @@
                             </li>
                             <li class="nav-item">
                                 <i class="fa-solid fa-file-medical"></i>
-                                <a href="#" style="font-size: 21px; padding-right: 65px">Prescriptions</a>
+                                <a href="prescription.jsp" style="font-size: 21px; padding-right: 65px">Prescriptions</a>
                             </li>
                             <li class="nav-item">
                                 <i class="fa-solid fa-user"></i>
-                                <a class="nav-link fw-600" href="#" style="font-size: 21px; padding-right: 110px">Patients</a>
+                                <a class="nav-link fw-600" href="patient.jsp" style="font-size: 21px; padding-right: 110px">Patients</a>
                             </li>
                             <li class="nav-item">
                                 <i class="fa-solid fa-calendar-days"></i>
-                                <a href="#" style="font-size: 21px; padding-right: 100px">Schedule</a>
+                                <a href="schedule.jsp" style="font-size: 21px; padding-right: 100px">Schedule</a>
                             </li>
                             <li class="nav-item">
                                 <i class="fa-solid fa-gear"></i>
-                                <a href="#"style="font-size: 21px; padding-right: 105px">Settings</a>
+                                <a href="settings.jsp"style="font-size: 21px; padding-right: 105px">Settings</a>
                             </li>
                             <li class="nav-item" style="margin-top: 350px">
                                 <i class="fa-solid fa-right-from-bracket"></i>
@@ -531,7 +461,7 @@
                   <div class="container" style="padding: 1px">
                       <h3 class="py-4 px-4" style="font-size: 20px;">Alerts</h3>
                         <div class='container'>
-                            <a href="#" class="list-group-item list-group-item-action py-1 lh-sm d-flex appoint" aria-current="true" style="padding: 1px">
+                            <a href="patient.jsp" class="list-group-item list-group-item-action py-1 lh-sm d-flex appoint" aria-current="true" style="padding: 1px">
                                 <img class="rounded-circle" src="components/images/bed.jpg" width="30" height="30" alt="alt"/>
                                 <div class="container">
                                     <div class="d-flex w-100 align-items-center justify-content-between">
@@ -544,7 +474,7 @@
                             <hr class="featurette-divider">
                             
                         <div class='container'>
-                            <a href="#" class="list-group-item list-group-item-action py-1 lh-sm d-flex appoint" aria-current="true" style="padding: 1px">
+                            <a href="patient.jsp" class="list-group-item list-group-item-action py-1 lh-sm d-flex appoint" aria-current="true" style="padding: 1px">
                                 <img class="rounded-circle" src="components/images/hand.jpg" width="30" height="30" alt="alt"/>
                                 <div class="container">
                                     <div class="d-flex w-100 align-items-center justify-content-between">
@@ -557,7 +487,7 @@
                             <hr class="featurette-divider">
                             
                         <div class='container'>
-                            <a href="#" class="list-group-item list-group-item-action py-1 lh-sm d-flex appoint" aria-current="true" style="padding: 1px">
+                            <a href="patient.jsp" class="list-group-item list-group-item-action py-1 lh-sm d-flex appoint" aria-current="true" style="padding: 1px">
                                 <img class="rounded-circle" src="components/images/HOLE.jpg" width="30" height="30" alt="alt"/>
                                 <div class="container">
                                     <div class="d-flex w-100 align-items-center justify-content-between">
@@ -573,8 +503,4 @@
               </div>
           </div>
       </div>
-
-<script src="components/js/dashboard.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
 </html>

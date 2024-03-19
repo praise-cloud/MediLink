@@ -5,8 +5,8 @@
 
 package com.medilink.servlets;
 
-import com.medilink.User;
-import com.medilink.UserDAO;
+import com.medilink.user.User;
+import com.medilink.user.UserDAO;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -27,7 +27,8 @@ public class SignUpServlet extends HttpServlet {
         // Retrieve form data
         String username = request.getParameter("username");
         String email = request.getParameter("email");
-        String password = request.getParameter("password");
+        String phone = request.getParameter("phoneNumber");
+        String password = request.getParameter("new-password");
         String confirmPassword = request.getParameter("confirmPassword");
         String role = request.getParameter("role");
 
@@ -41,7 +42,13 @@ public class SignUpServlet extends HttpServlet {
         } else if (!isValidEmail(email)) {
             errors.add("Invalid email format.");
         }
-        if (password == null || password.isEmpty()) {
+        if (phone == null || phone.isEmpty()) {
+            errors.add("Phone number is required.");
+        }
+//        } else if (!isValidPhoneNumber(phone)) {
+//            errors.add("Invalid phone number format. Please use digits only.");
+//        }
+        if (password != null && !password.isEmpty()) {
             errors.add("Password is required.");
         }
         if (confirmPassword == null || confirmPassword.isEmpty()) {
@@ -64,7 +71,7 @@ public class SignUpServlet extends HttpServlet {
         }
 
         // If no validation errors, create a new User object and save it to the database
-        User user = new User(username, email, password, confirmPassword, role);
+        User user = new User(username, email, phone, password, confirmPassword, role);
         UserDAO userDAO = new UserDAO();
         userDAO.createUser(user);
 
@@ -77,4 +84,9 @@ public class SignUpServlet extends HttpServlet {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}$";
         return email.matches(emailRegex);
     }
+    
+//    private boolean isValidPhoneNumber(String phone) {
+//    // - +911234567890
+//    return phone.matches("^\\+?\\d{0,2}[-\\.\\s]?\\(?(\\d{3})\\)?[-\\.\\s]?\\d{3}[-\\.\\s]?\\d{4}$");
+//}
 }
