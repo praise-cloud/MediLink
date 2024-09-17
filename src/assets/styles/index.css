@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+  @apply text-white font-bold text-4xl;
+}
+
+.navbar {
+  @apply flex bg-green-400 justify-center py-10 mx-auto gap-20 list-none;
+}
+
+.logo {
+  @apply text-xl text-white font-bold;
+}
+
+.navbar_links {
+  @apply flex text-[16px] text-gray-500 items-center justify-between bg-transparent space-x-6;
+}
+
+.navbar_features {
+  @apply flex items-center justify-center gap-5;
+}
+
+.navbar-btn {
+  @apply flex text-[16px] text-[#dc3545] items-center justify-between gap-3 py-2 px-5 border-2 rounded-full border-[#dc3545];
+}
