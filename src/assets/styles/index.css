@@ -7,7 +7,7 @@
 }
 
 .navbar {
-  @apply flex bg-green-400 justify-center py-10 mx-auto gap-20 list-none;
+  @apply flex bg-white justify-center py-10 mx-auto gap-20 list-none;
 }
 
 .logo {
@@ -16,6 +16,10 @@
 
 .navbar_links {
   @apply flex text-[16px] text-gray-500 items-center justify-between bg-transparent space-x-6;
+}
+
+.nav_link {
+  @apply flex items-center gap-1 hover:text-purple-400;
 }
 
 .navbar_features {

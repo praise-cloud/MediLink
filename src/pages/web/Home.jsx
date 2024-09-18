@@ -1,11 +1,11 @@
-import NaviagtionBar from "../../components/utils/NaviagtionBar"
+import NaviagtionBar from "../../components/utils/NaviagtionBar";
 
 const Home = () => {
   return (
     <>
-        <NaviagtionBar />
+      <NaviagtionBar />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
